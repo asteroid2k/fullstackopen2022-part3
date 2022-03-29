@@ -39,7 +39,7 @@ let persons = [
 ];
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("🚀\n Goto /api");
 });
 app.get("/info", (req, res) => {
   const peopleCount = persons.length + 1;
