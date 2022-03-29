@@ -9,11 +9,11 @@ app.use(cors());
 morgan.token("data", function (req, res) {
   return JSON.stringify(req.body);
 });
-
 const logger = morgan(
   "method :url :status :res[content-length] - :response-time ms :data"
 );
 app.use(logger);
+app.use(express.static("build"));
 
 let persons = [
   {
